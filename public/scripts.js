@@ -17,7 +17,7 @@ const timerDisplay = {
 
 function updateTimer() {
     if (!lastMeetingDate) return;
-    
+
     const now = new Date().getTime();
     const distance = now - lastMeetingDate;
 

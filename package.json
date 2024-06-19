@@ -1,5 +1,5 @@
 {
-  "name": "NaomTimer",
+  "name": "meeting-timer",
   "version": "1.0.0",
   "description": "A timer to count time since last meeting with Noam",
   "main": "server.js",
