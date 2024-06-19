@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('noam.jpg') no-repeat center center fixed;
+    background-size: cover;
+    direction: rtl;
+    text-align: center;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#timer {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.reset-button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.reset-button:hover {
+    background-color: darkred;
+}
