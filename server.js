@@ -10,27 +10,29 @@ const dataFilePath = path.join(__dirname, 'data.json');
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Function to initialize data.json with an initial date if it doesn't exist
 function initializeJsonFile() {
     if (!fs.existsSync(dataFilePath)) {
         const initialDate = new Date('June 10, 2024 16:00:00').getTime();
         saveLastMeetingDate(initialDate);
+        console.log(`Initialized data.json with date: ${initialDate}`);
+    } else {
+        console.log('data.json already exists.');
     }
 }
 
-// Load last meeting date from JSON file
 function loadLastMeetingDate() {
     const data = fs.readFileSync(dataFilePath);
-    return JSON.parse(data).lastMeetingDate;
+    const lastMeetingDate = JSON.parse(data).lastMeetingDate;
+    console.log(`Loaded lastMeetingDate: ${lastMeetingDate}`);
+    return lastMeetingDate;
 }
 
-// Save last meeting date to JSON file
 function saveLastMeetingDate(date) {
     const data = { lastMeetingDate: date };
     fs.writeFileSync(dataFilePath, JSON.stringify(data));
+    console.log(`Saved lastMeetingDate: ${date}`);
 }
 
-// Initialize the JSON file
 initializeJsonFile();
 
 app.get('/lastMeetingDate', (req, res) => {
