@@ -1,4 +1,6 @@
 // Fetch the initial meeting time from the server
+let lastMeetingDate;
+
 fetch('/lastMeetingDate')
     .then(response => response.json())
     .then(data => {
@@ -14,6 +16,8 @@ const timerDisplay = {
 };
 
 function updateTimer() {
+    if (!lastMeetingDate) return;
+    
     const now = new Date().getTime();
     const distance = now - lastMeetingDate;
 
