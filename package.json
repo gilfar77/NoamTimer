@@ -1,18 +1,17 @@
 {
-  "name": "noamtimer",
+  "name": "NaomTimer",
   "version": "1.0.0",
+  "description": "A timer to count time since last meeting with Noam",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "npm rebuild sqlite3"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "body-parser": "^1.20.2",
-    "express": "^4.19.2",
-    "sqlite3": "^5.1.7"
-  }
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "sqlite3": "^5.0.2"
+  },
+  "author": "",
+  "license": "ISC"
 }
